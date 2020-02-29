@@ -15,14 +15,14 @@
 <div class="w3-row">
   <div class="w3-half w3-black w3-container w3-center" style="height:700px">
     <div class="w3-padding-64">
-            <div id="profileInfo">
-            <h1>MENU</h1><h1 id="userIdProfileField"></h1>
-        </div>
+      <h1>MENU</h1>
     </div>
     <!--Action Buttom-->
     <div class="w3-padding-64">
       <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
       <a id="openWindowButton" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Open External Window</a>
+      <a id="scanQrCodeButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Open QR Code Reader</a>
+      <a id="getAccessToken" href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Get Access Token</a>
       <a id="sendMessageButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Send Message</a>
       <a id="getProfileButton" href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Get Profile</a>
       <a id="closeWindowButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Close LIFF APP</a>      
@@ -32,7 +32,36 @@
   
 </div>
 
+<!-- Second Grid: Work & Resume -->
 
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+    <!--Awal acces token-->
+    <div id="accessTokenData" class="w3-padding-64">
+      <h2>My Access Token</h2>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+        <tr class="w3-white">
+            <th>accessToken</th>
+            <td id="accessTokenField"></td>
+        </tr>
+     </table>
+     <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16" onclick="toggleAccessToken()">Close Access Token</a>
+    </div>
+    <!--end acces token -->
+<!-- SCAN QR RESULT -->
+    <div id="scanQr" class="w3-row">
+      <h2>QR Code reader</h2>
+        <table>
+                    <tr>
+                        <th>scanCode Result</th>
+                        <td id="scanQrField"></td>
+                    </tr>
+        </table>
+        <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16" onclick="toggleQRCodeReader()">Close QR Code Reader Result</a>
+    </div>
+    <!--End Scan QR-->
+  </div>
   <!-- LIFF DATA -->
 
   <div class="w3-half w3-indigo w3-container" style="min-height:800px">
@@ -90,7 +119,25 @@
   </div>
 </div>
 
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Swing By</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p>..for a cup of coffee, or whatever.</p>
+      <p>Chicago, US</p>
+      <p>+00 1515151515</p>
+      <p>test@test.com</p>
+    </div>
+  </div>
+</div>
 
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 <!-- LOGIN LOGOUT BUTTONS -->
             <div class="buttonGroup">
                 <button id="liffLoginButton">Log in</button>
