@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LINE LIFF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+<body class="w3-content" style="max-width:1300px">
+    <div id="liffAppContent">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>MENU</h1>
+    </div>
+    <!--Action Buttom-->
+    <div class="w3-padding-64">
+      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
+      <a id="openWindowButton" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Open External Window</a>
+      <a id="scanQrCodeButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Open QR Code Reader</a>
+      <a id="getAccessToken" href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Get Access Token</a>
+      <a id="sendMessageButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Send Message</a>
+      <a id="getProfileButton" href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Get Profile</a>
+      <a id="closeWindowButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Close LIFF APP</a>      
+    </div>
+    <!--End Action Buttom-->
+  </div>
+  
+</div>
+
+<!-- Second Grid: Work & Resume -->
+
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+    <!--Awal acces token-->
+    <div id="accessTokenData" class="w3-padding-64">
+      <h2>My Access Token</h2>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+        <tr class="w3-white">
+            <th>accessToken</th>
+            <td id="accessTokenField"></td>
+        </tr>
+     </table>
+     <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16" onclick="toggleAccessToken()">Close Access Token</a>
+    </div>
+    <!--end acces token -->
+<!-- SCAN QR RESULT -->
+    <div id="scanQr" class="w3-row">
+      <h2>QR Code reader</h2>
+        <table>
+                    <tr>
+                        <th>scanCode Result</th>
+                        <td id="scanQrField"></td>
+                    </tr>
+        </table>
+        <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16" onclick="toggleQRCodeReader()">Close QR Code Reader Result</a>
+    </div>
+    <!--End Scan QR-->
+  </div>
+  <!-- LIFF DATA -->
+
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div id="liffData" class="w3-padding-64 w3-center">
+      <h2 id="liffDataHeader">LIFF Data</h2>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+            <tr class="w3-white">
+                        <th>OS</th>
+                        <td id="deviceOS" class="textLeft"></td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td id="browserLanguage" class="textLeft"></td>
+                    </tr>
+                    <tr class="w3-white">
+                        <th>LIFF SDK Version</th>
+                        <td id="sdkVersion" class="textLeft"></td>
+                    </tr>
+                    <tr>
+                        <th>isInClient</th>
+                        <td id="isInClient" class="textLeft"></td>
+                    </tr>
+                    <tr class="w3-white">
+                        <th>isLoggedIn</th>
+                        <td id="isLoggedIn" class="textLeft"></td>
+                    </tr>
+         
+        </table>
+      </div>
+    </div>
+    <!-- PROFILE INFO -->
+    <div id="profileInfo" class="w3-padding-64 w3-center">
+      <h2 >Profile</h2>
+      <div class="w3-container w3-responsive">
+        <div id="profilePictureDiv" class="w3-margin w3-circle" alt="Person" style="width:50%">
+        </div>
+        <table class="w3-table">
+            <tr>
+                <th>userId</th>
+                <td id="userIdProfileField"></td>
+            </tr>
+            <tr>
+                <th>displayName</th>
+                <td id="displayNameField"></td>
+            </tr>
+            <tr>
+                <th>statusMessage</th>
+                <td id="statusMessageField"></td>
+            </tr>
+        </table>
+        <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16" onclick="toggleProfileData()">Close Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Swing By</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p>..for a cup of coffee, or whatever.</p>
+      <p>Chicago, US</p>
+      <p>+00 1515151515</p>
+      <p>test@test.com</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+<!-- LOGIN LOGOUT BUTTONS -->
+            <div class="buttonGroup">
+                <button id="liffLoginButton">Log in</button>
+                <button id="liffLogoutButton">Log out</button>
+            </div>
+            <div id="statusMessage">
+                <div id="isInClientMessage"></div>
+                <div id="apiReferenceMessage">
+                    <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
+                    <p>Please refer to the <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API reference page</a> for more information.</p>
+                </div>
+            </div>
+</div>
+ <!-- LIFF ID ERROR -->
+        <div id="liffIdErrorMessage" class="hidden">
+            <p>anda tidak bisa assigned any value for LIFF ID.</p>
+            <p>jika ingin running the app using Node.js, tolong set  LIFF ID terhadap environment variable di account Heroku anda lalu ikuti step by stepnya: </p>
+            <code id="code-block">
+                <ol>
+                    <li>Buka `Dashboard` di akun Heroku .</li>
+                    <li>klik app lalu klik created.</li>
+                    <li>klik `Settings` dan cari `Reveal Config Vars`.</li>
+                    <li>masukkan `MY_LIFF_ID` untuk key nya dan value atau nilai, masukkan LIFF ID (cth : 165X856817-X8GXXVNr  ada di url LIFF).</li>
+                    <li>kalau sudah, coba refresh kembali web nya.</li>
+                </ol>
+            </code>
+            <p>jika belum bergabung, tolong gabung LIFF ID di sini <code>index.html</code> file.</p>
+            <p>untuk info lebih lengkap bisa check LIFF ID, disini <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="liffInitErrorMessage" class="hidden">
+            <p>ada masalah terhadap LIFF initialization.</p>
+            <p>LIFF initialization gagal jika user klik "Cancel" di "Grant permission" screen, atau jika terjadi error occurs di the process of <code>liff.init()</code>.</p>
+        </div>
+        <!-- NODE.JS LIFF ID ERROR -->
+        <div id="nodeLiffIdErrorMessage" class="hidden">
+            <p>Unable to receive the LIFF ID as an environment variable.</p>
+        </div>
+        <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+        <script src="liff-starter.js"></script>
+</body>
+</html>
