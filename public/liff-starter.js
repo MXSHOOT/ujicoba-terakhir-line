@@ -151,7 +151,7 @@ function registerButtonHandlers() {
         }
     });
     
-    // sendMessages call
+    // sendMessages call 2
     document.getElementById('sendMessageButton2').addEventListener('click', function() {
         if (!liff.isInClient()) {
             sendAlertIfNotInClient();
@@ -163,7 +163,7 @@ function registerButtonHandlers() {
                 "type": "carousel",
                 "columns": [{
                     "title": "Referensi",
-                    "text": "Dicoding dan rojoinferno",
+                    "text": "Dic",
                     "actions": [
                         {
                             "type": "uri",
