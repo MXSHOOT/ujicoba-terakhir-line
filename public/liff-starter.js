@@ -151,6 +151,38 @@ function registerButtonHandlers() {
         }
     });
     
+    // sendMessages call
+    document.getElementById('sendMessageButton2').addEventListener('click', function() {
+        if (!liff.isInClient()) {
+            sendAlertIfNotInClient();
+        } else {
+            liff.sendMessages([ {
+            "type": "template",
+            "altText": "this is a carousel template",
+            "template": {
+                "type": "carousel",
+                "columns": [{
+                    "title": "Referensi",
+                    "text": "Dicoding dan rojoinferno",
+                    "actions": [
+                        {
+                            "type": "uri",
+                            "label": "Dicoding",
+                            "uri": "https://www.dicoding.com/"
+                        }
+                    ],
+                    "thumbnailImageUrl": "https://clueylearning.com.au/wp-content/uploads/2019/08/most-effective-way-to-study-according-to-science.jpg"
+                }],
+                "imageAspectRatio": "rectangle"
+            }
+        }]).then(function() {
+                window.alert('Ini adalah pesan dari fitur Send Message');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+        }
+    });
+    
     // scanCode call
     document.getElementById('scanQrCodeButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
