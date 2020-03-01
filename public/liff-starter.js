@@ -105,7 +105,7 @@ function registerButtonHandlers() {
     // openWindow call
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'line://app/1653856817-X8GnoVNr',
+            url: 'line://app/1653879232-7RkA96D6',
             external: true
         });
     });
