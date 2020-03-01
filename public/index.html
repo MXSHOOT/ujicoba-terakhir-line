@@ -36,19 +36,11 @@
 <tr>
 <td> Name: </td><td><input type="text" name="name"></td>
 </tr>
-<td><input name="submit" id="sendMessageButton" /></td></tr>
+<td><a id="sendMessageButton" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Send Message</a></td></tr>
 
 </form>
 </table>
 
-<?php
- if (isset($_POST['submit'])) {
- $NAME = $_POST["name"];
- 
- echo "Name is = ". $NAME .'</br>';
- 
- }
- ?>
 
   <!-- LIFF DATA -->
 
