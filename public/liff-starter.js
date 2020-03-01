@@ -105,7 +105,7 @@ function registerButtonHandlers() {
     // openWindow call
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'https://testliff11112.herokuapp.com/',
+            url: 'line://app/1653856817-X8GnoVNr',
             external: true
         });
     });
