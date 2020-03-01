@@ -31,7 +31,24 @@
   </div>
   
 </div>
+<table>
+<form action="" method="post">
+<tr>
+<td> Name: </td><td><input type="text" name="name"></td>
+</tr>
+<td><input name="submit" id="sendMessageButton" /></td></tr>
 
+</form>
+</table>
+
+<?php
+ if (isset($_POST['submit'])) {
+ $NAME = $_POST["name"];
+ 
+ echo "Name is = ". $NAME .'</br>';
+ 
+ }
+ ?>
 
   <!-- LIFF DATA -->
 
