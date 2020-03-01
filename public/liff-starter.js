@@ -134,8 +134,14 @@ function registerButtonHandlers() {
                 "type": "carousel",
                 "columns": [{
                     "title": "Referensi",
-                    "text": "Dic",
+                    "text": "Dicoding dan rojoinferno",
                     "actions": [
+                        {
+                            "type": "uri",
+                            "label": "Dicoding",
+                            "uri": "https://www.dicoding.com/"
+                        }
+                    ],[
                         {
                             "type": "uri",
                             "label": "Dicoding",
