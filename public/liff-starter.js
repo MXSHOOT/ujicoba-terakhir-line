@@ -141,14 +141,8 @@ function registerButtonHandlers() {
                             "label": "Dicoding",
                             "uri": "https://www.dicoding.com/"
                         }
-                    ],[
-                        {
-                            "type": "uri",
-                            "label": "Dicoding",
-                            "uri": "https://www.dicoding.com/"
-                        }
                     ],
-                    "thumbnailImageUrl": "https://clueylearning.com.au/wp-content/uploads/2019/08/most-effective-way-to-study-according-to-science.jpg"
+                    "thumbnailImageUrl": "https://www.dicoding.com/blog/wp-content/uploads/2017/10/dicoding-logo-square.png"
                 }],
                 "imageAspectRatio": "rectangle"
             }
