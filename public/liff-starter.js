@@ -1,6 +1,3 @@
-
-
-
 window.onload = function() {
     const useNodeJS = true;   // if you are not using a node server, set this value to false
     const defaultLiffId = "";   // change the default LIFF value if you are not using a node server
@@ -128,45 +125,13 @@ function registerButtonHandlers() {
             sendAlertIfNotInClient();
         } else {
             liff.sendMessages([ {
-  "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-                "type": "carousel",
-                "columns": [{
-                    "title": "Referensi",
-                    "text": "Dicoding dan rojoinferno",
-                    "actions": [
-                        {
-                            "type": "uri",
-                            "label": "Dicoding",
-                            "uri": "https://www.dicoding.com/"
-                        }
-                    ],
-                    "thumbnailImageUrl": "https://www.dicoding.com/blog/wp-content/uploads/2017/10/dicoding-logo-square.png"
-                }],
-                "imageAspectRatio": "rectangle"
-            }
-        }]).then(function() {
-                window.alert('Ini adalah pesan dari fitur Send Message');
-            }).catch(function(error) {
-                window.alert('Error sending message: ' + error);
-            });
-        }
-    });
-    
-    // sendMessages call 2
-    document.getElementById('sendMessageButton2').addEventListener('click', function() {
-        if (!liff.isInClient()) {
-            sendAlertIfNotInClient();
-        } else {
-            liff.sendMessages([ {
             "type": "template",
             "altText": "this is a carousel template",
             "template": {
                 "type": "carousel",
                 "columns": [{
                     "title": "Referensi",
-                    "text": "Dic",
+                    "text": "Dicoding dan rojoinferno",
                     "actions": [
                         {
                             "type": "uri",
