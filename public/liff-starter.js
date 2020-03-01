@@ -128,79 +128,25 @@ function registerButtonHandlers() {
             sendAlertIfNotInClient();
         } else {
             liff.sendMessages([ {
-  "type": "bubble",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "Dicoding Academy",
-        "weight": "bold"
-      }
-    ]
-  },
-  "hero": {
-    "type": "image",
-    "url": "https://www.dicoding.com/images/small/academy/menjadi_android_developer_expert_logo_041217105708.png",
-    "size": "full",
-    "aspectRatio": "4:3",
-    "aspectMode": "cover"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "Menjadi Android Developer Expert",
-        "size": "sm",
-        "color": "#c9302c",
-        "weight": "bold"
-      },
-      {
-        "type": "text",
-        "text": "oleh: Dicoding Indonesia",
-        "size": "sm",
-        "color": "#c9302c"
-      },
-      {
-        "type": "text",
-        "text": "Jadilah expert di dunia pemrograman Android. Materi disusun oleh Dicoding sebagai Google Authorized Training Partner.",
-        "size": "sm",
-        "wrap": true,
-        "margin": "lg"
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "secondary",
-        "action": {
-          "type": "postback",
-          "label": "Trial",
-          "displayText": "Trial",
-          "data": "Trial"
-        }
-      },
-      {
-        "type": "button",
-        "style": "primary",
-        "action": {
-          "type": "postback",
-          "label": "Daftar",
-          "displayText": "Daftar",
-          "data": "Daftar"
-        }
-      }
-    ]
-  }
-}]).then(function() {
+  "type": "template",
+            "altText": "this is a carousel template",
+            "template": {
+                "type": "carousel",
+                "columns": [{
+                    "title": "Referensi",
+                    "text": "Dic",
+                    "actions": [
+                        {
+                            "type": "uri",
+                            "label": "Dicoding",
+                            "uri": "https://www.dicoding.com/"
+                        }
+                    ],
+                    "thumbnailImageUrl": "https://clueylearning.com.au/wp-content/uploads/2019/08/most-effective-way-to-study-according-to-science.jpg"
+                }],
+                "imageAspectRatio": "rectangle"
+            }
+        }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
                 window.alert('Error sending message: ' + error);
